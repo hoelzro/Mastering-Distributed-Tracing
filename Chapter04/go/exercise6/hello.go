@@ -25,7 +25,7 @@ func main() {
 	opentracing.SetGlobalTracer(tracer)
 
 	http.HandleFunc("/sayHello/", handleSayHello)
-	othttp.ListenAndServe(":8080", "/sayHello")
+	othttp.ListenAndServe(":8081", "/sayHello")
 }
 
 func handleSayHello(w http.ResponseWriter, r *http.Request) {
